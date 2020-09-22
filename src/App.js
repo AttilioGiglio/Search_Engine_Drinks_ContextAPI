@@ -1,11 +1,18 @@
-import React from 'react';
-import './App.css';
+import React, { Fragment } from 'react';
+import Header from './components/header';
+import Formulario from './components/formulario';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Drinks App</h1>
-    </div>
+    <Fragment>
+      <Header />
+      <div className='container mt-5'>
+        <div className='row'>
+          <Formulario />
+        </div>
+
+      </div>
+    </Fragment>
   );
 }
 
