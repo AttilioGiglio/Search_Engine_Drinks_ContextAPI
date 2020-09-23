@@ -4,7 +4,6 @@ import {CategoriasContext} from '../context/context'
 const Formulario = () => {
 
     const {categorias} = useContext(CategoriasContext);
-    console.log(categorias);
     return (
         <form className="col-12">
         <fieldset className="text-center">
@@ -24,8 +23,10 @@ const Formulario = () => {
                     className="form-control"
                     name="categoria"
                 >
-                    <option value="">-- Selecciona Categoría --</option>
-                        <option></option>
+                    <option>-- Selecciona Categoría --</option>
+                    {categorias.map(categoria => (
+                        <option key={categoria.strCategory} value={categoria.strCategory}>{categoria.strCategory}</option>
+                    ))}
                 </select>
             </div>
 
