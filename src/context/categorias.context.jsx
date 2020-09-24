@@ -18,7 +18,7 @@ const  CategoriasProvider = (props) => {
             guardarCategorias(infoApi.data.drinks);
         }
         obtenerCategorias();
-    }, [])
+    }, [categorias])
 
     return(
        <CategoriasContext.Provider value={{categorias}}>
