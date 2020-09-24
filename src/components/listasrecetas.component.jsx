@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import {RecetasContext} from '../context/recetascontext';
-import RecetasVarias from './receta';
+import {RecetasContext} from '../context/recetas.context';
+import RecetasVarias from './receta.component';
 
 const ListasRecetas = () => {
 

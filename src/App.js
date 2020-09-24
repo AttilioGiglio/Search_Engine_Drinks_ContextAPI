@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './components/header';
-import Formulario from './components/formulario';
-import CategoriasProvider from './context/context';
-import RecetasProvider from './context/recetascontext';
-import ListasRecetas from './components/listasrecetas';
+import Header from './components/header.component';
+import Formulario from './components/formulario.component';
+import CategoriasProvider from './context/categorias.context';
+import RecetasProvider from './context/recetas.context';
+import ListasRecetas from './components/listasrecetas.component';
 
 function App() {
   return (
