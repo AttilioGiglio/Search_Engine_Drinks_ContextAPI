@@ -17,14 +17,15 @@ const Formulario = () => {
         guardarBusqueda({...busqueda, [e.target.name]: e.target.value})
     }
 
+    const registrarReceta = e => {
+        e.preventDefault();
+        buscarRecetas(busqueda)
+    }
+
     return (
         <form 
         className="col-12"
-        onSubmit={e => 
-        { e.preventDefault();
-          buscarRecetas(busqueda)
-        }
-        }
+        onSubmit={registrarReceta}
         >
         <fieldset className="text-center">
             <legend>Busca bebidas por Categoría o Ingrediente</legend>
@@ -43,6 +44,7 @@ const Formulario = () => {
                 <select 
                     className="form-control"
                     name="categoria"
+                    onChange={obtenerDatosReceta}
                 >
                     <option>-- Selecciona Categoría --</option>
                     {categorias.map(categoria => (
@@ -56,7 +58,6 @@ const Formulario = () => {
                     type="submit"
                     className="btn btn-block btn-primary"
                     value="Buscar Bebidas"
-                    onChange={obtenerDatosReceta}
                 />
             </div>
         </div>
