@@ -14,7 +14,7 @@ const RecetasVarias = ({receta}) => {
                     <button
                     type='button'
                     className='btn btn-block btn-primary'
-                    onClick={e=>{guardarIdReceta(receta.IdDrink)}}
+                    onClick={()=>{guardarIdReceta(receta.idDrink)}}
                     >
                     Ver receta
                     </button>
