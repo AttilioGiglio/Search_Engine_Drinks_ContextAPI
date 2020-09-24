@@ -14,8 +14,8 @@ const  CategoriasProvider = (props) => {
     useEffect(()=>{
         const obtenerCategorias = async()=>{
             const url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list';
-            const categorias = await Axios.get(url);
-            guardarCategorias(categorias.data.drinks);
+            const infoApi = await Axios.get(url);
+            guardarCategorias(infoApi.data.drinks);
         }
         obtenerCategorias();
     }, [])
