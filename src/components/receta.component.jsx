@@ -40,8 +40,8 @@ const RecetasVarias = ({receta}) => {
         setOpen(false);
       };
 
-    const {guardarIdReceta} = useContext(ModalContext); 
-
+    const {informacion, guardarIdReceta, guardarReceta} = useContext(ModalContext); 
+      
     return (
         <div className='col-md-4 mb-3'>
             <div className='card'>
@@ -61,6 +61,7 @@ const RecetasVarias = ({receta}) => {
                     open={open}
                     onClose={()=>{
                         guardarIdReceta(null);
+                        guardarReceta({});
                         handleClose();
                     }}
                     >
@@ -68,7 +69,10 @@ const RecetasVarias = ({receta}) => {
                         style={modalStyle} 
                         className={classes.paper}
                         >
-                            <h1>Desde Modal</h1>
+                            <h2>{informacion.strDrink}</h2>
+                            <h5 className='mt-4'>Instrucciones de preparación:</h5>
+                            <p>{informacion.strInstructions}</p>
+                            <img className='img-fluid my-4' src={informacion.strDrinkThumb} />
                         </div>
                     </Modal>
                 </div>
